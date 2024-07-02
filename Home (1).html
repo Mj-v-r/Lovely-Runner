@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+ 
+}
+
+.logo{
+  font-size: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a{
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+}
+
+nav a:hover,
+nav a.active{
+  color: aqua;
+}
+nav{
+  background-image: linear-gradient(
+      rgba(35, 71, 103, 0.5),
+      rgba(35, 71, 103, 0.5)
+    )
+}
+
+body{
+  margin: 0px;
+  background-image: url(image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+:root {
+--primary-color: #669ccb;
+--primary-color-dark: #5681a7;
+--secondary-color: #e8f1fa;
+--text-dark: #282d31;
+--text-light: #767268;
+--extra-light: #f3f4f6;
+--max-width: 1200px;
+}
+
+.section__container {
+padding: 18rem 1rem;
+margin: auto;
+background-image: linear-gradient(
+      rgba(35, 71, 103, 0.5),
+      rgba(35, 71, 103, 0.5)
+    )
+}
+
+.section__title {
+font-size: 2rem;
+font-weight: 500;
+color: white;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+.section__subtitle {
+font-size: 1rem;
+font-style: italic;
+color: var(--primary-color);
+margin-bottom: 5rem;
+text-align: center;
+}
+
+img {
+width: 100%;
+}
+
+body {
+font-family: "Roboto", sans-serif;
+}
+
+nav {
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+padding: 2rem 1rem;
+width: 100%;
+max-width: var(--max-width);
+display: flex;
+align-items: center;
+justify-content: space-between;
+color: black;
+}
+
+.nav__logo a {
+text-decoration: none;
+color: var(--extra-light);
+font-size: 1.5rem;
+}
+
+.nav__links {
+display: none;
+list-style: none;
+align-items: center;
+gap: 2rem;
+}
+
+.link {
+color: var(--extra-light);
+text-transform: uppercase;
+cursor: pointer;
+transition: 0.3s;
+display: flex;
+}
+
+.link:hover {
+color: var(--primary-color);
+}
+
+header {
+height: 100vh;
+
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+header .section__container {
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.header__content {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+color: var(--extra-light);
+}
+
+.header__content h1 {
+font-size: 5rem;
+font-weight: 400;
+line-height: 5rem;
+}
+
+.header__content p {
+text-align: center;
+}
+
+.header__content button {
+padding: 1rem 2rem;
+outline: none;
+border: none;
+border-radius: 5px;
+background-color: var(--primary-color);
+color: var(--extra-light);
+font-size: 1rem;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.header__content button:hover {
+background-color: var(--primary-color-dark);
+}
+
+.journey__container {
+background-color: var(--secondary-color);
+}
+
+.journey__grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1rem;
+}
+
+.cast__card {
+background-color: var(--extra-light);
+}
+
+.cast__name {
+padding: 1rem;
+text-align: left;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+color: var(--text-light);
+cursor: pointer;
+}
+
+.cast__name i {
+font-size: 1.2rem;
+}
+
+.cast__name span {
+font-style: italic;
+}
+
+.banner__container {
+background-image: linear-gradient(
+    rgba(35, 71, 103, 0.5),
+    rgba(35, 71, 103, 0.5)
+  ),
+  url("assets/bg-2.jpg");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.banner__container .section__container {
+padding: 10rem 1rem;
+display: flex;
+justify-content: center;
+}
+
+.banner__content {
+display: flex;
+align-items: center;
+flex-direction: column;
+gap: 1.5rem;
+text-align: center;
+color: var(--extra-light);
+}
+
+.banner__content h2 {
+font-size: 2rem;
+font-weight: 400;
+}
+
+.display__container {
+background-color: var(--secondary-color);
+}
+
+.display__container :is(.section__title, .section__subtitle) {
+color: var(--text-dark);
+}
+
+.display__grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1rem;
+}
+
+.display__card {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 0.5rem;
+background-color: var(--extra-light);
+text-align: center;
+}
+
+.display__card i {
+font-size: 2rem;
+color: var(--primary-color);
+}
+
+.display__card h4 {
+font-size: 1rem;
+font-weight: 500;
+padding: 0 1rem;
+color: var(--text-dark);
+}
+
+.display__card p {
+font-size: 0.8rem;
+padding: 0 1rem;
+color: var(--text-dark);
+}
+
+.display__grid .grid-1 {
+grid-area: 1/1/3/3;
+}
+
+@media (min-width: 640px) {
+.nav__links {
+  display: flex;
+}
+
+header .section__container {
+  justify-content: flex-start;
+}
+
+.header__content {
+  max-width: 400px;
+  align-items: flex-start;
+}
+
+.header__content p {
+  text-align: left;
+}
+
+.journey__grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.display__grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.display__card {
+  gap: 0;
+}
+
+.display__card i {
+  font-size: 1.75rem;
+}
+
+.display__card h4 {
+  font-size: 1rem;
+}
+
+.display__card p {
+  font-size: 0.7rem;
+}
+}
+
+@media (min-width: 786px) {
+.banner__container .section__container {
+  justify-content: flex-end;
+}
+
+.banner__content {
+  align-items: flex-end;
+  text-align: right;
+  max-width: 800px;
+}
+
+.display__card {
+  gap: 0.5rem;
+}
+
+.display__card i {
+  font-size: 2.5rem;
+}
+
+.display__card p {
+  font-size: 0.8rem;
+}
+}
+
+@media (min-width: 1024px) {
+.display__card {
+  gap: 1rem;
+}
+
+.display__card i {
+  font-size: 3rem;
+}
+
+.display__card h4 {
+  font-size: 1.5rem;
+}
+
+.display__card p {
+  font-size: 1rem;
+}
+}
+
+</style>
+
+<body>
+    
+    <header>
+        <a href="Home.html" class="logo">K-Drama</a> 
+    
+        
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#cast">Cast</a>
+            <a href="#episode">Episodes</a>
+            <a href="#quotes">Quote</a>
+        </nav>
+    </header>
+    <section id="home">
+            <div class="section__container">
+            <div class="header__content">
+              <h1>Lovely Runner</h1>
+              <p>
+                Ryu Seon-Jae (Byeon Woo-Seok) is a top star who has been in the spotlight since his debut. His life seems perfect, but being in the entertainment industry has completely worn him out. Meanwhile, Lim Sol (Kim Hye-Yoon) loves Ryu Seon-Jae as an adoring fan. When she was little, she had an accident. Due to that, she gave up on her dream, but listening to Ryu Seon-Jae’s song on the radio gave her comfort and she became his fan since then. One day, Lim Sol hears breaking news that Ryu Seon-Jae has ended his own life. She feels deep sadness over the tragic news. Miraculously, Lim Sol somehow travels back in time to 15 years in the past. There, she faces Ryu Seon-Jae, who is a 19 year old high school student. She struggles to prevent his tragic future.
+              </p>
+              
+            </div>
+          </div>
+        </section>
+    
+      <section class="journey__container">
+        <div class="section__container">
+
+          <section id="cast">
+          <h2 class="section__title">Cast</h2>
+          </section>
+
+          <div class="journey__grid">
+            <div class="cast__card">
+              <img src="Im sol.png" />
+              <div class="cast__name">
+                <span>Kim Hye-Yoon As Im Sol</span>
+              </div>
+            </div>
+            <div class="cast__card">
+              <img src="Sun jae.png" />
+              <div class="cast__name">
+                <span>Byeon Woo-Seok As Ryu Sun Jae</span>
+              </div>
+            </div>
+            <div class="cast__card">
+              <img src="In hyuk.png" />
+              <div class="cast__name">
+                <span>Lee Seung-Hyub As Baek In-Hyuk</span>
+              </div>
+            </div>
+            <div class="cast__card">
+              <img src="Im geum.png" />
+              <div class="cast__name">
+                <span>Song Ji-Ho As Im Geum</span>
+              </div>
+            </div>
+            <div class="cast__card">
+              <img src="Hyun ju.png" />
+              <div class="cast__name">
+                <span>Seo Hye-Won As Lee Hyun Ju</span>
+              </div>
+            </div>
+            <div class="cast__card">
+              <img src="Grandma.png" />
+              <div class="cast__name">
+                <span>Sung Byoung-Sook As Grandma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="banner__container">
+        <div class="section__container">
+          <div class="banner__content">
+
+            <section id="episode">
+            <h2>Episode 1</h2>
+            </section>
+
+            <p>“Thank you for staying alive. Your loved ones around you would be relieved and be grateful that you are still with them. So you should live your life today because it’s a great day.” – Ryu Sun Jae</p>
+            <p>“It will rain tomorrow. Then as you wait until the rain stops, live another day. If you keep this up, there might come a day when life doesn’t seem so miserable.” – Ryu Sun Jae</p>
+            <p>“I’m crying because I’m so happy. Actually, I’m your fan.” – Im Sol </p>
+            <p>“I’m the one who should thank you. For giving me the will to live again.” – Im Sol </p>
+            <p>“You must’ve been struggling by yourself, feeling so lonely. You couldn’t even tell anyone that you were having a hard time. I didn’t know you were in so much pain. I’m sorry I didn’t notice it. I love you, Sun Jae.” – Im Sol</p>           
+            <p>“What if everything disappears like an illusion when I wake up as if it’s a dream on a midsummer night?” – Im Sol</p>        
+            
+            <h2>Episode 2</h2>
+           
+            <p>“Why are you crying? Why do you always cry when you see me?” – Ryu Sun Jae</p>
+            <p>“I’ll protect you by your side from now on. So that you will never have bad thoughts.” – Im Sol</p>           
+            <p>“I wondered why the stars were missing from the night sky. I guess they were from your eyes. No wonder why I couldn’t see you straight. It was because you were so bright. Tae Sung, you are my star. A big star.” – Im Sol</p>           
+            <p>“You are going to die. I’m the only one in the world who knows that. But I can’t even tell you that. Despite that, I still want to protect you. I’m doing everything I can to save you.” – Im Sol</p>
+           
+            <h2>Episode 3</h2>
+  
+            <p>“Is there such a thing as destiny in life? Something we can neither change nor defy. Something like inevitability.” – Im Sol</p>
+            <p>“Being someone’s fan and liking someone romantically are different. You know?” – Baek In Hyuk</p>
+            <p>“It’s all about the timing when telling a girl how you feel.” – Baek In Hyuk</p>
+            <p>“No otake can be as successful as I am.” – Im Sol</p>
+            <p>“You get a free pass with everything.” – Im Sol</p>
+            <p>“I can even travel halfway around the world for you.” – Im Sol</p>
+            <p>“Even if you were to end up in a different time, I would jump over time and space to see you.” – Im Sol</p>
+            <p>“The fate hasn’t changed. As if it’s laughing at my desperateness and your endeavor, it has turned out like this.” – Im Sol</p>
+            <p>“If I can’t change anything, why am I even here?” – Im Sol</p>
+            <p>“Why are you crying harder than me?” – Ryu Sun Jae</p>
+            <p>“As you are feeling down all of a sudden, you look like something. Perfection.” – Im Sol</p>
+            <p>“As you are feeling down all of a sudden, you look like something. Perfection.” – Im Sol</p>
+            <p>“You’re so zing. Amazing.” – Im Sol</p>
+  
+            <h2>Episode 4</h2>
+  
+            <p>“Everyone faces such a moment at least once in his or her life. The moment when you feel like the whole world turns its back on you.” – Im Sol</p>
+            <p>“When you feel like dying, try to survive for just another day. That way, I can go back and try to save you.” – Im Sol</p>
+            <p>“Was it my memory that I lost? Was it you?” – Im Sol</p>
+  
+            <h2>Episode 5</h2>
+  
+            <p>“We live our lives as we miss out on many things. To me, Sun-jae was like a star in the sky, unreachable and a universe away.” – Im Sol</p>
+            <p>“Only when I faced my past again, did I realize how many moments of connection I had missed and life through. Perhaps the moments I must not miss could be somewhere sending me signals constantly as they shine brightly.” – Im Sol</p>
+            <p>“Not missing those signals. Perhaps, couldnt that be the reason why I came here and why you and I met again?” – Im Sol</p>
+            <p>“This very moment. The moment I shouldn’t probably miss.” – Im Sol</p>
+            <p>“I hope you’re selfish. I hope you think about how you can be happier and live a better life at times like this.” – Im Sol</p>
+  
+            <h2>Episode 6</h2>
+  
+            <p>“There was a rainshower on the day I saw her for the first time. She put a yellow umbrella over me with a smile. I couldn’t breathe because my heartf was fluttering. As if I forgot how to breathe.” – Ryu Sun Jae</p>
+            <p>“Did I shake his heart for no reason when he did nothing?” – Im Sol</p>
+            <p>“I think the worst villain in my life is my past self.” – Im Sol</p>
+            <p>“I was going to wait a bit longer. But I don’t think I can hide it anymore. Do you know what I despised the most? The rain. But it rained when I saw you for the first time. I liked it that day.” – Ryu Sun Jae</p>
+            <p>“I didn’t think I could suddenly like something I hated my whole life. I just thought that day was an exception. But I was wrong. I still don’t hate them. I don’t think I’ll ever hate them. The rain and you.” – Ryu Sun Jae</p>
+            <p>“I don’t know what kind of scars you have or the pain you have to face. But I want you to spend the time you have now in the best way possible, so you have no regrets later on.” – Im Sol</p>
+  
+            <h2>Episode 7</h2>
+  
+            <p>“Must I accept this as my inevitable fate?” – Im Sol</p>
+            <p>“Even when you can turn back time, you’re still helpless because you can’t stop time from passing.” – Im Sol</p>
+            <p>“When you gain something, you lose something. Happiness always comes with a cost.” – Im Geum</p>
+            <p>“I thought you’d come. But I hoped you wouldn’t come.” – Im Sol</p>
+  
+            <h2>Episode 8</h2>
+  
+            <p>“Time that passes again. This is my gift. Will this gift reach you in the future?” – Im Sol</p>
+            <p>“Seeing you again like this makes me so happy.” – Im Sol</p>
+            <p>“I worry that you might die tonight.” – Im Sol</p>
+            <p>“Let’s say that my fate changed. How could I be certain that my new life would be any better?” – Lee Hyun Ju</p>
+            <p>“I could be happy for the time being. But what about the future? Who knows if all kinds of bad stuff might suddenly start happening?” – Lee Hyun Ju</p>
+            <p>“No one can know what the future holds for us. We never know what kind of life we will have until we live it.” – Lee Hyun Ju</p>
+            <p>“Even if someone gives me a chance to go back in time, I would never gamble with my fate.” – Lee Hyun Ju</p>
+            <p>“I wanted your time to keep flowing instead of stopping.” – Im Sol</p>
+            <p>“Now that I hear you say that, my time which was standing still until now is finally flowing properly.” – Ryu Sun Jae</p>
+  
+            <h2>Episode 9 & 10</h2>
+  
+            <p>“A woman’s heart isn’t simple like a straight road. It’s like a complex off-road course. If you step on the pedal and go straight, do you know what happens? You’ll just crash. When you hit on her, step on the pedal. When you have to step back, you should slow down. Slow down, speed up. You should control your speed.” – Im Geum</p>
+            <p>“Where are you going? Are you going back to your time? Who are you? Did you really come from the future?” – Ryu Sun Jae</p>
+            <p>“What would you do if someone you like says she came from the future?” – Ryu Sun Jae</p>
+            <p>“I don’t care about time travel. It doesn’t matter which time zone you are from. Whether you’re from the past or the future, you are still the same to me.” – Ryu Sun Jae</p>
+            <p>“In all those times you have lived, was there any time that you liked me?” – Ryu Sun Jae</p>
+            <p>“I don’t deserve to like you.” – Im Sol</p>
+            <p>“Some things happen no matter what if they are bound to happen.” – Im Geum</p>
+            <p>“I’m more afraid of losing you again for the rest of my life than losing your affection. So the only thing I can do is to push you away like a coward.” – Im Sol</p>
+            <p>“You like me! I figured it all out. Why you keep pushing me away. I figured out everything. So I’m here to change your mind.” – Ryu Sun Jae</p>
+            <p>“Stop running away from me. Just pursue your feelings for me.” – Ryu Sun Jae</p>
+            <p>“If I end up dying to save you, I’ll be fine with that. That doesn’t matter.” – Ryu Sun Jae</p>
+  
+            <h2>Episode 11</h2>
+  
+            <p>“When you go back to the future after a month, let’s meet there. I’ll be running diligently to the year 2023 where you will be.” – Ryu Sun Jae</p>
+            <p>“To me, every moment with you is precious. So let’s not conceal our feelings. Let’s not hide from people. Let’s fully follow our hearts.” – Ryu Sun Jae</p>
+            <p>“You look like Hyun Bin and Gong Yoo to my eyes.” – Lee Hyun Ju</p>
+            <p>“You’re a man who is like 24k pure gold to me. You’re like a gold bar.” – Lee Hyun Ju</p>
+  
+            <h2>Episode 12</h2>
+  
+            <p>“Im not sure if I changed my mind or if it’s because I know my future, but what’s for sure is that my heart was racing.” – Ryu Sun Jae</p>
+            <p>“I wish time would pass by slowly.” – Ryu Sun Jae</p>
+            <p>“If there’s a fate that doesn’t change, no matter how much you try to change, it means the choice didn’t change.” – Ryu Sun Jae</p>
+            <p>“There are choices you make even though you know the consequences. Because you like it.” – Ryu Sun Jae</p>
+            <p>“It’s a path I haven’t taken before. It’s scary. But I think I can do it well if I do it with you.” – Ryu Sun Jae</p>
+            <p>“I don’t know when I’ll die but if there’s the brightest moment in my youth, I want it to be with you.” – Ryu Sun Jae</p>
+            <p>“I want you to tell me everything when you’re hurt and worn off without hiding anything. Don’t try to bear it alone.” – Ryu Sun Jae</p>
+            <p>“No matter how hard you try to hide it, I’ll come to you that day. This is the choice I cannot avoid.” – Ryu Sun Jae</p>
+            <p>“You won’t have to use the hair conditioner. Because you’re in perfect condition.” – Im Sol</p>
+            <p>“Are you a deer? Why do you keep melting my heart, my sweet dear?” – Im Sol</p>
+            <p>“I hope you don’t have to go back. I hope you get stuck in this time and never go back.” – Ryu Sun Jae</p>
+            <p>“I don’t want tomorrow to come.” – Im Sol</p>
+            <p>“If today ends up being my last day here, don’t be so sad.” – Im Sol</p>
+            <p>“I like you. I thought I would regret it if I left again without telling you how I felt.” – Im Sol</p>
+            <p>“I’ll change my fate on my own. This time, please don’t come to me.” – Im Sol</p>
+  
+            <h2>Episode 13</h2>
+  
+            <p>“My future has changed. Sun Jae, what are we going to do?” – Im Sol</p>
+            <p>“We can meet again in the future and come back here together.” – Ryu Sun Jae</p>
+            <p>“I should thank you for coming into this world. For making the long journey of time to come to me. With that, I got a chance to ask you to be with me. For that, I’m grateful.” – Ryu Sun Jae</p>
+            <p>“There are choices you make even though you know the consequences. Because you like it.” – Ryu Sun Jae</p>
+            <p>“You don’t want tomorrow to come. Tomorrow won’t come until we open our eyes.” – Ryu Sun Jae</p>
+            <p>“Sun Jae, is it still nightmare in your world?” – Im Sol</p>
+            <p>“For changing many things, I had to lose a precious thing.” – Im Sol</p>
+            <p>“Perhaps, we should have never met in the first place.” – Im Sol</p>
+  
+            <h2>Episode 14</h2>
+            
+            <p>“If you think that way and feel offended again, that’s even better. Because you would never want to be associated with me again.” – Im Sol</p>
+            <p>“Do you believe in things like fate?” – Ryu Sun Jae</p>
+            <p>“My friend, let go of the idea that everyone in the world will like you. Anyone can hate us.” – Dong Seok</p>
+            <p>“Even if we hadn’t met before, given that we were neighbors, isn’t that fate?” – Ryu Sun Jae</p>
+            <p>“Even if we hadn’t met before, given that we were neighbors, isn’t that fate?” – Ryu Sun Jae</p>
+            <p>“You have no idea how it felt to cut him out of my life. Cutting him out of my life had been crazy hard. We can’t meet like this again.” – Im Sol</p>
+            <p>“Given how many times we’re running into each other, isn’t the universe basically pushing us toward each other?” – Ryu Sun Jae</p>
+            <p>“By the way, is that how it really ends? Is the man stuck in life without any memories of the woman he loved?” – Ryu Sun Jae</p>
+            <p>“It’s a sad ending.” – Ryu Sun Jae</p>
+            <p>“It’s a happy ending for the woman. She saved the man.” – Im Sol</p>
+            <p>“But she lost love. Can she still be happy after losing love?” – Ryu Sun Jae</p>
+            <p>“I’ve never been here before. But it feels familiar. Like I’ve been here before.” – Ryu Sun Jae</p>
+            <p>“You might die. What if I tell you getting mixed up with me might kill you? Would you still do it?” – Im Sol</p>
+            <p>“Must I be prepared to face death to get mixed up with you?” – Ryu Sun Jae</p>
+            <p>“At that moment, this crossed my mind. That our fate was just going around in circles just like this Ferris wheel.” – Im Sol</p>
+  
+            <h2>Episode 15</h2>
+  
+            <p>“It’s just whenever I see her, some scenes pop up in my head blurredly as if they were scenes from a movie I watched a long time ago.” – Ryu Sun Jae</p>
+            <p>“Getting tangled up again by fate. Isn’t that the worst ending?” – Im Sol</p>
+            <p>“All humans live a time-limited life, don’t they? Everyone is destined to die one day.” – Ryu Sun Jae</p>
+            <p>“Is It better to live for a long time? Even for a moment, it’s better to live happily with someone you love.” – Ryu Sun Jae</p>
+            <p>“I also think it’s weird, but it’s true that I’m interested in you. I keep thinking and worrying about you.” – Ryu Sun Jae</p>
+            <p>“You rejected me many times.” – Ryu Sun Jae</p>
+            <p>“Memories don’t disappear. Where do you think all the countless memories of what you see, listen, and feel in your life go? They’re all smeared into my soul. Even if my brain forgot them, my soul hasn’t. It’s been keeping every piece of it.” – Grandma</p>
+            <p>“Is there such a thing as predetermined fate? Like an inevitable fate that we can neither change nor defy. If there is Sol, my fate is no matter in which time we meet, past, present, or any other, I’ll fall in love with you.” – Ryu Sun Jae</p>
+  
+            <h2>Episode 16</h2>
+  
+            <p>“Did you cry like that everyday when you were alone? Missing the person who forgot everything about you?” – Ryu Sun Jae</p>
+            <p>“Do you still not want to change the ending? But what can we do, it has changed already.” – Ryu Sun Jae</p>
+            <p>“Im sorry I’m late. I’m sorry I forgot.” – Ryu Sun Jae</p>
+            <p>“I don’t want to spend a single moment without you from now on because it was so wasteful to live forgetting you.” – Ryu Sun Jae</p>
+            <p>“It means my heart remembered you even if my brain forgot you.” – Ryu Sun Jae</p>
+            <p>“It doesn’t feel real. It feels like a dream.” – Ryu Sun Jae</p>
+            <p>“You can now have a long life with her. Be happy together. With a lot of smiles.” – Grandma</p>
+            <p>“From now on, I want to spend every waking moment with you. Will you, Sol?” – Ryu Sun Jae</p>
+            <p>“Yes, I will. I’ll stay by your side for the rest of my life.” – Im Sol</p>
+  
+          </div>
+        </div>
+      </section>
+      <section class="display__container">
+        <div class="section__container">
+          <p class="section__subtitle">
+            <section id="quotes">
+            The present will turn into the past in just a second.
+            The most special moment in our lives might just be today, the moment you spend with your loved ones.
+            </section>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <script src="script.js">
+        let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrolly;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
+            });
+        }
+
+    });
+};
+      </script>
+</body>
+</html>
